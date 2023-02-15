@@ -127,18 +127,16 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ConvoLogger.cpp" />
+    <ClCompile Include="Convo.cpp" />
     <ClCompile Include="Helper.cpp" />
-    <ClCompile Include="MessageQueue.cpp" />
     <ClCompile Include="MessgaeServer.cpp" />
     <ClCompile Include="Server.cpp" />
     <ClCompile Include="Source.cpp" />
     <ClCompile Include="WSAInitializer.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ConvoLogger.h" />
+    <ClInclude Include="Convo.h" />
     <ClInclude Include="Helper.h" />
-    <ClInclude Include="MessageQueue.h" />
     <ClInclude Include="MessgaeServer.h" />
     <ClInclude Include="Server.h" />
     <ClInclude Include="WSAInitializer.h" />

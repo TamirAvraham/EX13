@@ -13,7 +13,7 @@ public:
 
 protected:
 
-	void acceptClient();
+	virtual void acceptClient();
 	virtual void clientHandler(SOCKET clientSocket);
 
 	SOCKET _serverSocket;

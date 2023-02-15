@@ -2,6 +2,7 @@
 
 #include <vector>
 #include <string>
+#include <map>
 #include <WinSock2.h>
 
 
@@ -18,15 +19,15 @@ enum MessageType : byte
 class Helper
 {
 public:
+	static bool isFileExist(std::string fileName);
+	static int getMessageTypeCode(char* data);
+	static int getIntPartFromSocket(char* data, int begin, int size);
+	static void sendData(SOCKET sc, std::string message);
+	static void send_update_message_to_client(SOCKET sc, const std::string& file_content, const std::string& second_username, const std::string& all_users);
+	static std::string getPaddedNumber(int num, int digits);
+	static char* getDataFromSocket(SOCKET sc);
+	static std::string getPartFromSocket(char* data, int begin, int size);
 
-
-	static int getMessageTypeCode(const SOCKET sc);
-	static int getIntPartFromSocket(const SOCKET sc, const int bytesNum);
-	static std::string getStringPartFromSocket(SOCKET sc, const int bytesNum);
-	static void sendData(const SOCKET sc, const std::string message);
-	static void send_update_message_to_client(const SOCKET sc, const std::string& file_content, const std::string& second_username, const std::string& all_users);
-	static std::string getPaddedNumber(const int num, const int digits);
-	static char* getDataFromSocket(SOCKET);
 
 private:
 	static std::string getPartFromSocket(const SOCKET sc, const int bytesNum);

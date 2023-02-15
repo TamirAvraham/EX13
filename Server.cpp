@@ -65,7 +65,8 @@ void Server::acceptClient()
 
 	std::cout << "Client accepted. Server and client can speak" << std::endl;
 	// the function that handle the conversation with the client
-	clientHandler(client_socket);
+	std::thread clientThread([&]() {clientHandler(client_socket); });
+	clientThread.detach();
 }
 
 
